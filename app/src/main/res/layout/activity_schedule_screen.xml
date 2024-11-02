@@ -1,0 +1,524 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScheduleScreen">
+
+    <Button
+        android:id="@+id/btnBack5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/go_back_icon"
+        android:backgroundTint="#000000"
+        android:onClick="goBack2"
+        android:textColor="#000000"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView" />
+
+    <Button
+        android:id="@+id/btnBack2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/go_back_icon"
+        android:backgroundTint="#000000"
+        android:onClick="goBack"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/coursesText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:fontFamily="@font/nexa"
+                android:hint="Courses that you want to study."
+                android:inputType="text"
+                android:padding="5dp"
+                android:textColorHint="#cdc1ff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lblComma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nexa"
+                android:text="Please add comma (,) between courses" />
+
+            <TextView
+                android:id="@+id/lblDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nexa"
+                android:text="Select the days you want to study:"
+                android:textColor="#7371fc" />
+
+            <GridLayout
+                android:id="@+id/gridLayoutDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:columnCount="3"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkSunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa"
+                    android:text="Sunday"
+                    android:textColor="#3f37c9" />
+
+                <CheckBox
+                    android:id="@+id/checkMonday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa"
+                    android:text="Monday"
+                    android:textColor="#3f37c9" />
+
+                <CheckBox
+                    android:id="@+id/checkTuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa"
+                    android:text="Tuesday"
+                    android:textColor="#3f37c9" />
+
+                <CheckBox
+                    android:id="@+id/checkWednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa"
+                    android:text="Wednesday"
+                    android:textColor="#3f37c9" />
+
+                <CheckBox
+                    android:id="@+id/checkThursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa"
+                    android:text="Thursday"
+                    android:textColor="#3f37c9" />
+
+                <CheckBox
+                    android:id="@+id/checkFriday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa"
+                    android:text="Friday"
+                    android:textColor="#3f37c9" />
+
+                <CheckBox
+                    android:id="@+id/checkSaturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa"
+                    android:text="Saturday"
+                    android:textColor="#3f37c9" />
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <EditText
+                    android:id="@+id/sessionText"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:fontFamily="@font/nexa"
+                    android:hint="Session time."
+                    android:inputType="time"
+                    android:padding="5dp"
+                    android:textColorHint="#cdc1ff"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/breakText"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:fontFamily="@font/nexa"
+                    android:hint="Break time."
+                    android:inputType="time"
+                    android:padding="5dp"
+                    android:textColorHint="#cdc1ff"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <EditText
+                    android:id="@+id/startFreeTimeText"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:fontFamily="@font/nexa"
+                    android:hint="Start free time."
+                    android:inputType="time"
+                    android:padding="5dp"
+                    android:textColorHint="#cdc1ff"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/endFreeTimeText"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_input"
+                    android:ems="10"
+                    android:fontFamily="@font/nexa"
+                    android:hint="End free time."
+                    android:inputType="time"
+                    android:padding="5dp"
+                    android:textColorHint="#cdc1ff"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/mondayStartFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Monday Start Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/mondayEndFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Monday End Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/tuesdayStartFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Tuesday Start Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/tuesdayEndFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Tuesday End Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/wednesdayStartFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Wednesday Start Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/wednesdayEndFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Wednesday End Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/thursdayStartFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Thursday Start Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/thursdayEndFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Thursday End Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/fridayStartFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Friday Start Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/fridayEndFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Friday End Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/saturdayStartFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Saturday Start Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/saturdayEndFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Saturday End Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/sundayStartFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Sunday Start Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/sundayEndFreeTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input"
+                        android:fontFamily="@font/nexa"
+                        android:hint="Sunday End Free Time"
+                        android:inputType="time"
+                        android:padding="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#cdc1ff"
+                        android:textSize="24sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/freeTimeCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexa"
+                android:text="Set the free time day by day." />
+
+            <EditText
+                android:id="@+id/extraNotesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:fontFamily="@font/nexa"
+                android:gravity="start|top"
+                android:hint="Extra notes to add."
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:textColorHint="#cdc1ff"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnCreateSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/buttons"
+                android:fontFamily="@font/nexa"
+                android:onClick="generateSchedule"
+                android:padding="10dp"
+                android:text="Create Schedule"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:visibility="invisible">
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

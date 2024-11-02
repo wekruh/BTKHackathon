@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "434956874614",
+    "project_id": "my-btk-hackathon-app",
+    "storage_bucket": "my-btk-hackathon-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434956874614:android:24a09849ad25934bc3c057",
+        "android_client_info": {
+          "package_name": "com.wekruh.mybtkhackathonapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuKIE4qZBEUCvYmkI3XzmCXZdNLVJsoDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

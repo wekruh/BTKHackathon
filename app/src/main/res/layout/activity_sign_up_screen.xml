@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnSignUp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login"
+    tools:context=".SignUpScreen">
+
+    <ImageView
+        android:id="@+id/whiteBackground2"
+        android:layout_width="361dp"
+        android:layout_height="571dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_background" />
+
+    <TextView
+        android:id="@+id/lblPassword3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nexa"
+        android:text="Password Confirm"
+        android:textColor="#7371fc"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPassword2" />
+
+    <EditText
+        android:id="@+id/textPasswordConfirm"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:fontFamily="@font/nexa"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/whiteBackground2"
+        app:layout_constraintStart_toStartOf="@+id/whiteBackground2"
+        app:layout_constraintTop_toBottomOf="@+id/lblPassword3" />
+
+    <TextView
+        android:id="@+id/lblLogin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/nexa"
+        android:gravity="center"
+        android:text="Open your account right now!"
+        android:textColor="#7371fc"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/whiteBackground2" />
+
+    <Button
+        android:id="@+id/btnLogin2"
+        android:layout_width="320dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/nexa"
+        android:onClick="signUp"
+        android:text="sıgn up"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPasswordConfirm" />
+
+    <EditText
+        android:id="@+id/textPassword2"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:fontFamily="@font/nexa"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/whiteBackground2"
+        app:layout_constraintStart_toStartOf="@+id/whiteBackground2"
+        app:layout_constraintTop_toBottomOf="@+id/lblPassword2" />
+
+    <EditText
+        android:id="@+id/textEmail2"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:fontFamily="@font/nexa"
+        android:inputType="text"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/whiteBackground2"
+        app:layout_constraintStart_toStartOf="@+id/whiteBackground2"
+        app:layout_constraintTop_toTopOf="@+id/whiteBackground2" />
+
+    <TextView
+        android:id="@+id/lblPassword2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nexa"
+        android:text="Password"
+        android:textColor="#7371fc"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEmail2" />
+
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/nexa"
+        android:text="E-Mail"
+        android:textColor="#7371fc"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textEmail2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="34dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/go_back_icon"
+        android:backgroundTint="#000000"
+        android:onClick="goBack"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/whiteBackground2"
+        app:layout_constraintTop_toTopOf="@+id/whiteBackground2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nexa"
+        android:text="Fast and easy!"
+        android:textColor="#B3B3B3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblLogin2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
